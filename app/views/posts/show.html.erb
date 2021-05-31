@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Show : <u>The <%= @post.title %></u></h1>
+
+<p>
+  <strong>Body:</strong>
+  <%= @post.body %>
+</p>
+
+ <p>
+ 	<% @post.files.each do |file| %>
+  		<%= image_tag(file, width:250, height:200) %>
+  	<% end %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+
